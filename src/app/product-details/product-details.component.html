@@ -1,0 +1,9 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product" class="product-details">
+  <h3>{{ product.title }}</h3>
+  <p><strong>Category:</strong> {{ product.category }}</p>
+  <p><strong>Price:</strong> {{ product.price }}</p>
+</div>
+
+<a routerLink="/products">Back to Products</a>

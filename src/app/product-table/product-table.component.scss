@@ -1,0 +1,39 @@
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .loading {
+    font-weight: bold;
+    color: blue;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

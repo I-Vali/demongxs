@@ -1,0 +1,28 @@
+<h2>Product List</h2>
+
+<table class="product-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Thumbnail</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Price ($)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products$ | async">
+      <td>{{ product.id }}</td>
+      <td>
+        <img [src]="product.thumbnail" alt="{{ product.title }}" width="50">
+      </td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <button (click)="viewDetails(product.id)">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
