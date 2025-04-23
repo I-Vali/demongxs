@@ -21,10 +21,10 @@ export class ProductTableComponent implements OnInit {
   ngOnInit() {
     console.log('Dispatch fetch list action on init')
     this.store.dispatch(new FetchProducts()); // Dispatch action to fetch products
-    console.log(this.store.selectSnapshot(ProductState.getProducts));
+    // console.log(this.store.selectSnapshot(ProductState.getProducts));
 
     this.actions.pipe(ofActionCompleted(FetchProducts)).subscribe(() => {
-      console.log(this.store.selectSnapshot(ProductState.getProducts));
+      // console.log(this.store.selectSnapshot(ProductState.getProducts));
     })
 
     this.actions.pipe(ofActionErrored(FetchProducts)).subscribe(() => {
@@ -35,6 +35,6 @@ export class ProductTableComponent implements OnInit {
   viewDetails(productId: number) {
     this.router.navigate(['/products', productId]);
 
-    console.log(this.store.selectSnapshot(ProductState.getProducts));
+    // console.log(this.store.selectSnapshot(ProductState.getProducts));
   }
 }

@@ -24,13 +24,13 @@ export class ProductState implements NgxsOnChanges, NgxsOnInit {
     constructor(private productService: ProductService) { }
 
     ngxsOnInit(ctx: StateContext<any>): void {
-        console.log('State initialized with context ', ctx);
+        // console.log('State initialized with context ', ctx);
     }
 
     ngxsOnChanges(change: NgxsSimpleChange) {
-        console.log('prev state', change.previousValue);
-        console.log('next state', change.currentValue);
-      }
+        // console.log('prev state', change.previousValue);
+        // console.log('next state', change.currentValue);
+    }
 
     // Selector for all products
     @Selector()
